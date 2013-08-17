@@ -1,0 +1,23 @@
+SERVER : 'galleries'
+
+Método => getGallery()
+
+descricao : fornecendo o id de uma galeria retorna as imagens correspondentes.
+
+
+Dados de entrada : 
+Token 			= (string),
+site 			= (string)(trip/tpm),
+id da galeria 	= (int),
+
+ex basico : array('token','site','10');
+
+
+retorno :
+
+[imageId] 	=> (int)
+[legend] 	=> (string),
+[credit] 	=> (string),
+[image] 	=> (string),
+[thumb] 	=> (string)
+

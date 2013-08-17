@@ -1,0 +1,23 @@
+server : articles
+
+Método : getArticlesHome()
+
+Descrição : Retorna todas as matérias que estão na home atual do site 
+
+Dados de entrada : Token = (string),site = (string)(trip/tpm)
+
+ex ('token','site');
+
+
+retorno :
+[contentId] 	=> (int)
+[title] 		=> (string)
+[author] 		=> (string)
+[lead] 			=> (string)
+[content] 		=> (string)
+[date] 			=> (date)
+[contentCover] 	=> (string)
+[contentThumb] 	=> (string)
+[gallery] 		=> (int)
+[topicId] 		=> (int)
+[topic] 		=> (string)

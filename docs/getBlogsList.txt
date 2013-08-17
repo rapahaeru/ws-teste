@@ -1,0 +1,10 @@
+SERVER : 'blogs'
+Método => getBlogsList()
+
+Dados de entrada : 
+Token 	= (string),
+site 	= (string)(trip/tpm),
+
+array('token','trip');
+retorna todos os blogs ativos
+

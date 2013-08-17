@@ -1,0 +1,18 @@
+SERVER : 'blogs'
+Método => getBlogs()
+
+Dados de entrada : 
+Token 		= (string),
+site 		= (string)(trip/tpm),
+idblog 		= (int),
+page 		= (int), (padrão 0)
+limit 		= (int),(padrão 10)
+
+
+array('token','trip','','','');
+retorna os últimos posts inseridos de qualquer blog
+
+array('token','trip','3','','');
+retorna os últimos posts do blog passado, no caso "na redação"
+
+

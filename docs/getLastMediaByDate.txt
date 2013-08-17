@@ -1,0 +1,30 @@
+SERVER : 'medias'
+Método => getLastMediaByDate()
+
+Dados de entrada : 
+Token     = (string),
+site      = (string)(trip/tpm),
+data      = (date)(YYYY-mm-DD)
+MediaTag  = (string) (audio/video)
+
+
+Retorno:
+'MediaId'  				=> (INT)
+'Mediatitle'  			=> (STRING)
+'Medialead'  			=> (STRING)
+'Mediadate'  			=> (DATE)
+'MediaCover'			=> (STRING)
+'MediaThumb' 			=> (STRING)
+'MediaThumbTag'			=> (STRING)
+'MediaLength'			=> (INT)
+'MediaEdition'			=> (INT)
+'MediaObs'				=> (STRING)
+'MediaLinkVideo'		=> (STRING)
+'MediaLinkAudio01'		=> (STRING)
+'MediaLinkAudio02'		=> (STRING)
+
+
+Exemplos:
+array('0d80f42a1a7928acf49f5f81de9b4a1a','trip','2011-09-20','video');
+array('0d80f42a1a7928acf49f5f81de9b4a1a','trip','2011-09-20','audio');
+array('0d80f42a1a7928acf49f5f81de9b4a1a','tpm','2011-09-20','video');

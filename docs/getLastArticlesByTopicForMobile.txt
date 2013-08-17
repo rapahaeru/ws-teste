@@ -1,0 +1,46 @@
+SERVER : 'articles'
+Método => getLastArticlesByTopicForMobile()
+
+Dados de entrada : 
+Token     = (string),
+site      = (string)(trip/tpm),
+data      = (date)(YYYY-mm-DD)
+tagSeo    = (string) (esporte/trip-girls)
+tagType   = (string) (section/topic)
+
+Retorno:
+'contentId'  			=> (INT)
+'title'  				=> (STRING)
+'author'  				=> (STRING)
+'lead'  				=> (STRING)
+'leadMobile'			=> (STRING)
+'content'  				=> (STRING)
+'date'  				=> (DATE)
+'contentCover'			=> (STRING)
+'contentThumb' 			=> (STRING)
+'gallery'  				=> (INT)
+'contentUrl'  			=> (STRING)
+'topicForMobileSeoTag'	=> (STRING)
+'topicForMobileType'  	=> (STRING)
+'type' 					=> (STRING)
+'typeMediaExt'			=> (STRING)													
+'linkPodcast' 			=> (STRING)
+'linkVideocast'			=> (STRING)
+
+OBS
+*[type] 			=> 4 tipos (podcast,videocast, podcast/videocast ou default)
+*[typeMediaExt] 	=> retorna a extensao de video, 'flv' ou 'other'
+*[linkPodcast] 		=> Carregará o link, caso seja podcast 
+*[linkVideocast] 	=> Carregará o link, caso seja videocast.
+
+Método que retorna as matérias (articles) publicadas até a data enviada, sendo filtrada
+pelo seotag(esporte/trip-girls...) e pelo tipo do seotag(section/topic)
+
+Obs : No máximo 6 matérias de retorno.
+
+
+retornam as trip girls publicadas até a data 
+array('token','trip','2010-04-13','trip-girls','section');
+
+retornam as matérias com assunto esporte publicadas até a data 
+array('token','trip','2010-04-13','esporte','topic');

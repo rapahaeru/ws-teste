@@ -1,0 +1,38 @@
+SERVER : 'articles'
+
+Método => getAdvertisingTag()
+
+Dados de entrada : 
+Token = (string),
+site = (string)(trip/tpm/audi),
+peça = (string), iphone ou android = (seal/fullpage/fullbanner), ipad = (horizontal/vertical) não obrigatorio (caso nao usado, utilizar '' (aspas vazias))
+tipo = (string), (iphone / android / ipad) não obrigatorio (caso nao usado, utilizar '' (aspas vazias))
+
+
+
+exemplos de solicitacoes :
+
+array('token','trip','',''); // retornam todas as tags disponiveis de trip
+
+array('token','trip','','iphone'); // retornam todas as tags disponiveis de trip iphone
+
+array('token','trip','seal','iphone'); // retorna a tag referente ao selo de trip iphone
+array('token','trip','fullpage','iphone'); // retorna a tag fullpage de trip iphone
+array('token','trip','fullbanner','iphone'); // retorna a tag fullbanner de trip iphone
+
+array('token','trip','','ipad'); // retornam todas as tags disponiveis de trip ipad
+array('token','trip','horizontal','ipad'); // retorna a tag horizontal de trip ipad
+array('token','trip','vertical','ipad'); // retorna a tag vertical de trip ipad
+
+
+
+retorno :
+    [ipadHorizontal] => (string)
+    [ipadVertical] => (string)
+    [iphoneSeal] => (string)
+    [iphoneFullpage] => (string)
+    [iphoneFullbanner] => (string)
+    [androidSeal] => (string)
+    [androidFullpage] => (string)
+    [androidFullbanner] => (string)
+

@@ -1,0 +1,9 @@
+SERVER : 'articles'
+Método => getTopicsForMobile()
+
+Dados de entrada : 
+Token     = (string),
+site      = (string)(trip/tpm),
+
+Retorna todas uma lista com todas as categorias 
+array('token','trip','','','','',''); // ('token','site')

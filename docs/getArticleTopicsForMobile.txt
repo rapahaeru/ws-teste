@@ -1,0 +1,81 @@
+SERVER : 'articles'
+Método => getArticleTopicsForMobile()
+
+Dados de entrada : 
+Token     = (string),
+site      = (string)(trip/tpm),
+tagSeo    = (string) (esporte/trip-girls)
+tagType   = (string) (section/topic)
+data      = (date)(YYYY-mm-DD)
+page      = (int) (padrão 0)
+limit     = (int)(padrão 10)
+
+Retorno:
+'contentId'  			=> (INT)
+'title'  				=> (STRING)
+'author'  				=> (STRING)
+'lead'  				=> (STRING)
+'leadMobile'			=> (STRING)
+'content'  				=> (STRING)
+'date'  				=> (DATE)
+'contentCover'			=> (STRING)
+'contentThumb' 			=> (STRING)
+'gallery'  				=> (INT)
+'contentUrl'  			=> (STRING)
+'topicForMobileSeoTag'	=> (STRING)
+'topicForMobileType'  	=> (STRING)
+'type' 					=> (STRING)
+'typeMediaExt'			=> (STRING)													
+'linkPodcast' 			=> (STRING)
+'linkVideocast'			=> (STRING)
+
+OBS
+*[type] 			=> 4 tipos (podcast,videocast, podcast/videocast ou default)
+*[typeMediaExt] 	=> retorna a extensao de video, 'flv' ou 'other'
+*[linkPodcast] 		=> Carregará o link, caso seja podcast 
+*[linkVideocast] 	=> Carregará o link, caso seja videocast.
+
+SUMARIO
+
+TRIP
+array('seo' => 'ensaios','type' =>'assunto');
+array('seo' => 'tv-trip','type' => 'secao');
+array('seo' => 'trip-fm','type' => 'secao');
+array('seo' => 'reportagens','type' => 'secao');
+array('seo' => 'entrevistas','type' => 'secao');
+array('seo' => 'salada','type' => 'secao');
+array('seo' => 'cultura-pop','type' => 'assunto');
+array('seo' => 'esporte','type' => 'assunto');
+array('seo' => 'moda','type' => 'assunto');
+array('seo' => 'viagem','type' => 'assunto');
+array('seo' => 'notas','type' => 'secao');
+
+
+TPM
+array('seo' => 'entrevistas','type' => 'assunto');
+array('seo' => 'moda','type' => 'assunto');
+array('seo' => 'beleza','type' => 'assunto');
+array('seo' => 'ensaio','type' => 'assunto');
+array('seo' => 'decoracao','type' => 'assunto');
+array('seo' => 'reportagens','type' => 'assunto');
+array('seo' => 'tv-tpm','type' => 'secao');
+array('seo' => 'trip-fm','type' => 'secao');
+array('seo' => 'badulaque','type' => 'secao');
+array('seo' => 'esporte','type' => 'assunto');
+array('seo' => 'cultura-pop','type' => 'assunto');
+array('seo' => 'viagem','type' => 'assunto');
+
+EXEMPLOS
+Retorna todas as matérias separadas por assunto NA data atual  
+array('token','trip','','','','',''); // ('token','site','tagSeo','tagType','data','page','limit') 
+		
+Retorna matérias filtradas por categoria passada (tagSeo), NA data atual 
+array('token','trip','esporte','topic','','',''); // ('token','site','tagSeo','tagType','data','page','limit')
+
+Retorna matérias separadas POR categoria a partir da data enviada   
+
+array('token','trip','','','2000-06-07','',''); // ('token','site','tagSeo','tagType','data','page','limit')
+
+Retorna matérias da categoria(tagSeo) passada a partir da data também enviada
+
+array('token','trip','','','2000-06-07','',''); // ('token','site','tagSeo','tagType','data','page','limit')
